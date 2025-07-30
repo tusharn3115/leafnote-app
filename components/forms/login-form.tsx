@@ -23,7 +23,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { signInUser } from "@/server/users";
+import { signInUser } from "@/server/user";
 import { useState } from "react";
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
@@ -54,7 +54,7 @@ export function LoginForm({
   const signIn = async () => {
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: "/dashboard",
+      callbackURL: "/",
     });
   };
 
@@ -64,7 +64,7 @@ export function LoginForm({
       const response = await signInUser(values.email, values.password);
       if (response.success) {
         toast.success(response.message);
-        router.push("/dashboard");
+        router.push("/");
       } else {
         toast.error(response.message);
       }
