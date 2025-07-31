@@ -51,7 +51,7 @@ export default function HeroSection() {
                   as="h1"
                   className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16"
                 >
-                  🌱 Capture ideas without the clutter.
+                  📝Capture ideas without the clutter.
                 </TextEffect>
                 <TextEffect
                   per="line"
