@@ -1,5 +1,7 @@
 export const Notebooks = () => {
-    return <>
-        
+  return (
+    <>
+      <p>Notebooks</p>
     </>
-}
+  );
+};

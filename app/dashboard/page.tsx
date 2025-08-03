@@ -1,3 +1,4 @@
+import { CreateNotebookButton } from "@/components/create-notebook-button";
 import { PageWrapper } from "@/components/page-wrapper";
 import { getNotebook } from "@/server/notebook";
 
@@ -7,6 +8,7 @@ export default async function Page() {
   return (
     <PageWrapper breadcrumbs={[{ label: "Dashboard", href: "/dashboard" }]}>
       <h1>Dashboard</h1>
+      <CreateNotebookButton />
 
       {notebooks.success &&
         notebooks.notebooks?.map((notebook) => (
